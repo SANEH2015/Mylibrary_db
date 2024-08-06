@@ -12,7 +12,8 @@ return(
         width:"40%",
         boxShadow:"11px 11px 11px 11px #a3d1daaa",
         borderRadius:"10px",
-        padding:"100px"
+        padding:"100px",
+        margin:"20px"
 
        
 
