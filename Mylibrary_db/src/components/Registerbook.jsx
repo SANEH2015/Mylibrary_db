@@ -1,4 +1,12 @@
 function Registerbook(){
+  const handleChange = (e) => {
+    setBook({ ...book, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(book);
+    alert("Succesful")
+  }
 return(
     <>
     <div className="container" style={{
@@ -23,41 +31,41 @@ return(
         <div className="input">
           <div className="input" >
           
-            <input type="text" placeholder="ISBN" style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}} ></input>
+            <input type="text" onChange={handleChange}    placeholder="ISBN" style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}} ></input>
           </div>
           <div className="input">
          
-            <input type="Email" placeholder="Title" style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Email" placeholder="Title" onChange={handleChange}  style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
          
-            <input type="Password" placeholder="Number of pages"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password" onChange={handleChange}  placeholder="Number of pages"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
           
-            <input type="Password" placeholder="Edition"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password" onChange={handleChange}  placeholder="Edition"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
         
-            <input type="Password" placeholder="Cover designer"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password" onChange={handleChange}  placeholder="Cover designer"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
         
-            <input type="Password" placeholder="Price"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password" onChange={handleChange}  placeholder="Price"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
         
-            <input type="Password" placeholder="Format"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password" onChange={handleChange}  placeholder="Format"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           <div className="input">
         
-            <input type="Password" placeholder="Date"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
+            <input type="Password"  onChange={handleChange} placeholder="Date"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
           </div>
           
         </div>
         
         <div className="submit">
-        <button>Submit</button>
+        <button onSubmit={handleSubmit}>Submit</button>
           
         </div>
       </div>

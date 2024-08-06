@@ -56,7 +56,7 @@ function App() {
 
   return (
     <>
-   <Addbook book ={booktable[0]}/>
+   {/* <Addbook book ={booktable[0]}/> */}
     <Deletebook/>
     <Displaybook/>
     <Updatebook/>
