@@ -1,4 +1,4 @@
-
+import Deletebook from "./Deletebook"
 function Bookcard({book}){
 return(
     <>
@@ -12,7 +12,7 @@ return(
         width:"40%",
         boxShadow:"11px 11px 11px 11px #a3d1daaa",
         borderRadius:"10px",
-        padding:"100px",
+       
         margin:"20px"
 
        
@@ -22,8 +22,9 @@ return(
        <h1  className="title" style={{marginRight:"300px"}}>{book.Title}</h1 >
        <span className="Auther" style={{fontSize:"20px",marginRight:"400px"}} > {book.publisher}</span>
     <h6 className="price"  style={{fontSize:"20px",marginRight:"440px"}}>{book.Price}</h6>
-
+    <Deletebook/>
     </div>
+  
     </>
 )
 

@@ -1,12 +1,31 @@
+import React,{useState} from "react";
+import {addbook } from "./Addbook"
 function Registerbook(){
+  
+  const [book, setBook] = useState({
+    ISBN: "",
+    Title:"",
+    Num_of_pages:"",
+    Edition:"",
+    publisher:"",
+    Editor:"",
+    Cover_page_designer:"",
+    Price:"",
+    Format:"",
+    Relice_date:"",})
+    
   const handleChange = (e) => {
     setBook({ ...book, [e.target.name]: e.target.value });
+
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(book);
-    alert("Succesful")
+    // asyncddbook()
+    console.log("new book",book);
+ addbook(book)
   }
+
+  
 return(
     <>
     <div className="container" style={{
@@ -15,7 +34,7 @@ return(
           alignItems:"center",
           flexDirection:"column",
           backgroundColor:"lightblue",
-          height:"600px",
+          height:"800px",
           width:"40%",
           boxShadow:"11px 11px 11px 11px #a3d1daaa",
           borderRadius:"10px",
@@ -28,46 +47,52 @@ return(
           <h3 className="text">Register Form</h3>
           <div className="underline"></div>
         </div>
-        <div className="input">
-          <div className="input" >
+        
+        <form className="input" onSubmit={handleSubmit}>
+          {/* <div className="input" > */}
           
-            <input type="text" onChange={handleChange}    placeholder="ISBN" style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}} ></input>
-          </div>
-          <div className="input">
+            <input type="text" onChange={handleChange} name="ISBN"  value={book.ISBN ||""}  placeholder="ISBN" style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px" , padding:"10px"}} ></input>
+          {/* </div> */}
+          {/* <div className="input"> */}
          
-            <input type="Email" placeholder="Title" onChange={handleChange}  style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
+            <input type="text" placeholder="Title" onChange={handleChange} name="Title" value={book.Title ||""} style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div> */}
+          {/* <div className="input"> */}
          
-            <input type="Password" onChange={handleChange}  placeholder="Number of pages"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
+          <input type="text" onChange={handleChange} name="Num_of_pages"  value={book.Num_of_pages ||""}  placeholder="Num_of_pages" style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px" , padding:"10px"}} ></input>
+          {/* </div>
+          <div className="input"> */}
+            
           
-            <input type="Password" onChange={handleChange}  placeholder="Edition"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
-        
-            <input type="Password" onChange={handleChange}  placeholder="Cover designer"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
-        
-            <input type="Password" onChange={handleChange}  placeholder="Price"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
-        
-            <input type="Password" onChange={handleChange}  placeholder="Format"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
-          <div className="input">
-        
-            <input type="Password"  onChange={handleChange} placeholder="Date"style={{width:"150%",height:"40px",borderRadius:"10px",border:"none",margin:"10px"}}></input>
-          </div>
+            <input type="text" placeholder=" Edition" onChange={handleChange} name=" Edition" value={book. Edition ||""} style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div> */}
+          {/* <div className="input"> */}
           
-        </div>
-        
-        <div className="submit">
-        <button onSubmit={handleSubmit}>Submit</button>
+            <input type="text" onChange={handleChange} value={book.publisher ||""} name="publisher" placeholder="publisher"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div> */}
+          {/* <div className="input"> */}
           
-        </div>
+          <input type="text" onChange={handleChange} value={book.Editor ||""} name="Editor" placeholder="Editor"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+        {/* </div>
+          <div className="input"> */}
+          <input type="text" onChange={handleChange} value={book.Cover_page_designer ||""} name="Cover_page_designer" placeholder="Cover_page_designer"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+        {/* </div>
+          <div className="input">  */}
+        
+        <input type="text" placeholder="Price" onChange={handleChange} name="Price" value={book.Price ||""} style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div>
+          <div className="input"> */}
+        
+            <input type="text" onChange={handleChange} value={book.Format ||""} name="Format"  placeholder="Format"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div>
+          <div className="input"> */}
+        
+            <input type="date"  onChange={handleChange} value={book. Relice_date||""} name="Relice_date" placeholder="Date"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
+          {/* </div> */}
+          <button >Register</button>
+        </form>
+        
+        
       </div>
      
    

@@ -1,8 +1,12 @@
 //This component delete information
-function Deletebook(){
+function Deletebook(ISBN){
+    let delect = JSON.parse(localStorage.getItem("booktable"))
 
+    function Handledelect(){
+
+    }
 return(
-    <button style={{margin:"20px"}}>Delete</button>
+    <button onClick={Handledelect} style={{margin:"20px"}}>Delete</button>
 )
 
 }
