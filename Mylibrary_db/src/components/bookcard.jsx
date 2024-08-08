@@ -19,9 +19,9 @@ return(
 
     }}>
        <div className="image" ><img src={book.Cover_page_designer } alt="200px" ></img>   </div>
-       <h1  className="title" style={{marginRight:"300px"}}>{book.Title}</h1 >
-       <span className="Auther" style={{fontSize:"20px",marginRight:"400px"}} > {book.publisher}</span>
-    <h6 className="price"  style={{fontSize:"20px",marginRight:"440px"}}>{book.Price}</h6>
+       <h1  className="title" style={{marginRight:""}}>{book.Title}</h1 >
+       <span className="Auther" style={{fontSize:"20px",marginRight:""}} > {book.publisher}</span>
+    <h6 className="price"  style={{fontSize:"20px",marginRight:""}}>{book.Price}</h6>
     <Deletebook ISBN={book.ISBN}/>
     </div>
   

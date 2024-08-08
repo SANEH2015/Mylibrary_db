@@ -28,6 +28,10 @@ function Registerbook(){
   
 return(
     <>
+    <div className="main" >
+      <div className="image">
+       
+      </div>
     <div className="container" style={{
           display:"flex",
           justifyContent:"center",
@@ -95,7 +99,7 @@ return(
         
       </div>
      
-   
+      </div>
       
     </>
 )
