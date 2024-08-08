@@ -1,4 +1,5 @@
 import Deletebook from "./Deletebook"
+import Updatebook from "./Updatebook"
 function Bookcard({book}){
 return(
     <>
@@ -22,7 +23,10 @@ return(
        <h1  className="title" style={{marginRight:""}}>{book.Title}</h1 >
        <span className="Auther" style={{fontSize:"20px",marginRight:""}} > {book.publisher}</span>
     <h6 className="price"  style={{fontSize:"20px",marginRight:""}}>{book.Price}</h6>
+    <div style={{display:"flex"}}>
     <Deletebook ISBN={book.ISBN}/>
+    <div style={{padding:"2px",marginTop:"15px",color:"green"}} ><Updatebook /></div>
+    </div>
     </div>
   
     </>
