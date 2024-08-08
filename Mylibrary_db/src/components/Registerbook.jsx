@@ -37,10 +37,11 @@ return(
           justifyContent:"center",
           alignItems:"center",
           flexDirection:"column",
-          backgroundColor:"lightblue",
+          backgroundColor:"rgb(183, 212, 254)",
           height:"700px",
           width:"40%",
-          boxShadow:"11px 11px 11px 11px #a3d1daaa",
+       
+          // boxShadow:"11px 11px 11px 11px rgb(183, 212, 254)",
           borderRadius:"10px",
          
           margin:"20px"
