@@ -55,16 +55,19 @@ function App() {
   // localStorage.setItem('booktable',JSON.stringify(booktable));
   // let book_list = []
   
-
+  let mybooks = localStorage.getItem("booktable")
+  let bookData = mybooks ? JSON.parse(mybooks) : []
+  console.log(bookData)
   return (
     <>
    {/* <Addbook book ={booktable[0]}/> */}
    
     {/* <Deletebook/> */}
-    <Displaybook/>
+   
     {/* <Updatebook/> */}
     <Registerbook/>
-    <Bookcard book ={booktable[0]}/>
+    <Displaybook bookList={bookData}/>
+    {/* <Bookcard book ={booktable[0]}/> */}
     </>
   )
 }

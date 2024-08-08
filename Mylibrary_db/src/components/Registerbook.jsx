@@ -34,11 +34,11 @@ return(
           alignItems:"center",
           flexDirection:"column",
           backgroundColor:"lightblue",
-          height:"800px",
+          height:"700px",
           width:"40%",
           boxShadow:"11px 11px 11px 11px #a3d1daaa",
           borderRadius:"10px",
-          padding:"100px",
+         
           margin:"20px"
          
   

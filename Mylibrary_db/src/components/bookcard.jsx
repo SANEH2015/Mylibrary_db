@@ -9,7 +9,7 @@ return(
         flexDirection:"column",
         backgroundColor:"white",
         height:"600px",
-        width:"40%",
+        width:"30%",
         boxShadow:"11px 11px 11px 11px #a3d1daaa",
         borderRadius:"10px",
        
@@ -22,7 +22,7 @@ return(
        <h1  className="title" style={{marginRight:"300px"}}>{book.Title}</h1 >
        <span className="Auther" style={{fontSize:"20px",marginRight:"400px"}} > {book.publisher}</span>
     <h6 className="price"  style={{fontSize:"20px",marginRight:"440px"}}>{book.Price}</h6>
-    <Deletebook/>
+    <Deletebook ISBN={book.ISBN}/>
     </div>
   
     </>
