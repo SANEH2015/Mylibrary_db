@@ -52,7 +52,7 @@ function App() {
     }
    
   ]
-  localStorage.setItem('booktable',JSON.stringify(booktable));
+  // localStorage.setItem('booktable',JSON.stringify(booktable));
   // let book_list = []
   
   let mybooks = localStorage.getItem("booktable")

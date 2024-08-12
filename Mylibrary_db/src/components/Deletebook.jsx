@@ -14,7 +14,7 @@ function Deletebook({ISBN}){
     localStorage.setItem('booktable', JSON.stringify(filteredData));
   };
 return(
-    <button onClick={handleDelete} style={{margin:"20px"}}>Delete</button>
+    <button onClick={handleDelete} style={{margin:"20px",backgroundColor:"red",color:"white"}}>Delete</button>
 )
 
 }
