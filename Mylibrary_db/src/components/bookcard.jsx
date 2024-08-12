@@ -25,7 +25,7 @@ return(
     <h6 className="price"  style={{fontSize:"20px",marginRight:""}}>{book.Price}</h6>
     <div style={{display:"flex"}}>
     <Deletebook ISBN={book.ISBN}/>
-    <div style={{padding:"2px",marginTop:"15px",color:"green"}} ><UpdateBook /></div>
+    <div style={{padding:"2px",marginTop:"15px",color:"green"}} ><UpdateBook books={book} /></div>
     </div>
     </div>
   
