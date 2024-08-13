@@ -40,7 +40,7 @@ return(
   
     }}>
         <div className="header">
-          <h3 className="text">Register Form</h3>
+          <h3 className="text">Update Form</h3>
           <div className="underline"></div>
         </div>
         
@@ -85,7 +85,7 @@ return(
         
             <input type="date"  onChange={handleChange} value={book. Relice_date||""} name="Relice_date" placeholder="Date"style={{width:"50%",height:"40px",borderRadius:"10px",border:"none",margin:"10px",padding:"10px"}}></input>
           {/* </div> */}
-          <button >Register</button>
+          <button >Submit</button>
         </form>
         
         
